@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #00FFFF; /* Orange color for text */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px; /* Ensures the container doesn't get too wide */
+    margin: 40px auto; /* Adds space at the top and centers the container */
+    background: #333; /* Dark background for the container */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+h1.info-heading {
+    text-align: center;
+    color: #00FFFF; /* Orange color */
+    font-weight: bold;
+    margin-bottom: 40px; /* Adds spacing below the heading */
+}
+
+h2 {
+    color: #00FFFF; /* Orange color */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select.animation, /* Added select styling */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #00FFFF; /* Changed border color to orange for consistency */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #444; /* Dark background for input fields */
+    color: #00FFFF; /* Orange text for input fields */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select.animation:focus, /* Added focus effect for select */
+textarea:focus,
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+select.animation:hover, /* Added hover effect for select */
+textarea:hover {
+    transform: scale(1.05); /* Pop out effect */
+    box-shadow: 0 0 10px #00FFFF; /* Orange glow */
+}
+
+select.animation {
+    width: 100%; /* Full-width dropdown */
+    padding: 10px;
+    font-size: 16px;
+    background-color: #444; /* Match other input fields */
+    color: #00FFFF; /* Orange text */
+    border: 1px solid #00FFFF; /* Orange border */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.animation {
+    transition: all 0.3s ease-in-out;
+}
+
+.scroll-animation {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #00FFFF; /* Orange color */
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    margin-top: 20px; /* Adds spacing above the submit button */
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
+    background-color: #2396a3; /* Slightly darker orange */
+}
+
+.info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.name-input, .other-inputs, section {
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    color: #00FFFF; /* Orange color */
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Adjusts container width for smaller screens */
+        padding: 15px;
+    }
+
+    .submit-button {
+        font-size: 16px; /* Adjusts button size for smaller screens */
+    }
+}

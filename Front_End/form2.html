@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Sharing Platform</title>
+    <link rel="stylesheet" href="style_form.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="info-heading">IDEA SUBMISSION</h1>
+        <div class="info-column">
+            <div class="name-input">
+                <section>
+                    <h2>Project Title</h2>
+                    <input class="animation" type="text" id="project-title" name="project-title" placeholder="Enter Project Title">
+                </section>
+            </div>
+            <section>
+                <h2>Your Name</h2>
+                <input class="animation" type="text" id="name" name="name" placeholder="Enter Your Name">
+            </section>
+            <section>
+                <h2>Email Address</h2>
+                <input class="animation" type="email" id="email" name="email" placeholder="Enter Email Address">
+            </section>
+            <section>
+                <h2>Contact Number</h2>
+                <input class="animation" id="phone" name="phone" type="tel" placeholder="Phone Number" pattern="\d{10}" inputmode="numeric" maxlength="10" required>
+            </section>
+            <section>
+                <h2>Role</h2>
+                <select class="animation" id="role" name="role">
+                    <option value="student">Student</option>
+                    <option value="professor">Professor</option>
+                </select>
+            </section>
+            <section>
+                <h2>Description</h2>
+                <textarea class="animation" id="description" name="description" rows="7" cols="50" placeholder="Describe Your Project"></textarea>
+            </section>
+        </div>
+        <section>
+            <div class="other-inputs">
+                <h2>Reference Image/Video Link</h2>
+                <input class="animation" type="url" id="media-link" name="media-link" placeholder="Paste the Link Here">
+                <input type="file" id="media-file" name="media-file"><br><br>
+            </div>
+        </section>
+        <a href="dashboard.html">
+            <button class="submit-button" type="submit">Submit</button>
+          </a>
+          
+    </div>
+
+    <script>
+        // Restrict input to digits and limit to 10 characters
+        document.getElementById('phone').addEventListener('input', function (e) {
+            this.value = this.value.replace(/\D/g, '').slice(0, 10);
+        });
+
+        const the_animation = document.querySelectorAll('.animation');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-animation');
+                } else {
+                    entry.target.classList.remove('scroll-animation');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        for (let i = 0; i < the_animation.length; i++) {
+            const elements = the_animation[i];
+            observer.observe(elements);
+        }
+    </script>
+</body>
+</html>
